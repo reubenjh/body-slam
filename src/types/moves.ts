@@ -1,6 +1,7 @@
-export type Dog = {
+export type Move = {
   identifier: string;
-  rarity: string;
   type: string;
   name: string;
+  damage: number;
+  pp: number;
 };

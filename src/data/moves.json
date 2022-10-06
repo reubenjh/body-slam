@@ -1,0 +1,30 @@
+[
+  {
+    "identifier": "bodyslam",
+    "type": "normal",
+    "name": "Body Slam",
+    "damage": "100",
+    "pp": "10"
+  },
+  {
+    "identifier": "pound",
+    "type": "normal",
+    "name": "Pound",
+    "damage": "30",
+    "pp": "25"
+  },
+  {
+    "identifier": "hyperbeam",
+    "type": "normal",
+    "name": "Hyper Beam",
+    "damage": "200",
+    "pp": "5"
+  },
+  {
+    "identifier": "rest",
+    "type": "psychic",
+    "name": "Rest",
+    "damage": "0",
+    "pp": "15"
+  }
+]
