@@ -1,0 +1,26 @@
+[
+  {
+    "identifier": "husky",
+    "rarity": "elite",
+    "type": "friend",
+    "name": "Husky"
+  },
+  {
+    "identifier": "shepherd",
+    "rarity": "exceptional",
+    "type": "big",
+    "name": "Shepherd"
+  },
+  {
+    "identifier": "russell",
+    "rarity": "elite",
+    "type": "woof",
+    "name": "Jack Russell"
+  },
+  {
+    "identifier": "whippet",
+    "rarity": "exceptional",
+    "type": "zoom",
+    "name": "Whippet"
+  }
+]
