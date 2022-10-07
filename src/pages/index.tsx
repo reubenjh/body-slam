@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const getRowProps = useCallback(() => {
     return {
-      className: "",
+      className: "border-b",
     };
   }, []);
 
