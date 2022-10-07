@@ -7,11 +7,11 @@
     "pp": "10"
   },
   {
-    "identifier": "pound",
+    "identifier": "megapunch",
     "type": "normal",
-    "name": "Pound",
-    "damage": "30",
-    "pp": "25"
+    "name": "Mega Punch",
+    "damage": "80",
+    "pp": "20"
   },
   {
     "identifier": "hyperbeam",
