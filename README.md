@@ -6,9 +6,11 @@ It's a technical interview template.
 
 ## What is this app?
 
-This app takes some source data about what moves Snorlax can learn and displays it in a table. The data is stored in a JSON file. There will never be more than say 10 or 15 moves that Snorlax can learn, so the table won't need pagination, sorting etc. The app is intended to be used by Snorlax trainers to help them decide which moves to teach their Snorlax. Expect a couple hundred users at most, and very limited development in the future beyond the tasks described below other than filling out all the possible moves.
+Imagine this is a real app. It takes some source data about what moves Snorlax can learn and displays it in a table. The data is stored in a JSON file. There will never be more than say 10 or 15 moves that Snorlax can learn, so the table won't ever need pagination, sorting etc.
 
-You're welcome to change anything you want about the app, data structure, components, style system, types etc, but you don't need to. Please explain if you do so. The only thing we ask you don't do is add more moves.
+The app is intended to be used by Snorlax trainers to help them decide which moves to teach their Snorlax. Expect a couple hundred users at most, and very limited development in the future beyond the tasks described below (other than filling out all the possible moves).
+
+You're welcome to change anything you want about the app, data structure, components, style system, table, types etc, but you don't need to. Please explain if you do so. The only thing we ask you don't do is add more moves.
 
 Plan to spend 1-2 hours on it. If you're not done in 2 hours, that's fine, just send us what you have. We're not looking for perfection, just a sense of how you work.
 
@@ -16,8 +18,7 @@ Plan to spend 1-2 hours on it. If you're not done in 2 hours, that's fine, just 
 
 We want to make some minor improvements.
 
-- The table does need to be styled a little bit to not look like complete rubbish.
-- Make the moves in the table clickable, taking you to a page dedicated to each move.
+- Make the moves in the table clickable, taking you to a page dedicated to each move. You're welcome to do whatever you want with the Table component. It's a bit of a mess.
 - The new move specific pages should render the move's name, type, and power, as well as an image of a snorlax using the move (find these on google search, don't spend much time on this, just get any old img if you can't find a good fit quickly).
 - The move specific pages should be styled with a page background color fitting the elemental type of the move.
 - Add a header with a link that takes you back to the main page with snorlax and his moves.
