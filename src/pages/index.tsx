@@ -1,39 +1,46 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/future/image";
-// import { trpc } from "../utils/trpc";
+import { trpc } from "../utils/trpc";
 import snorlax from "public/snorlax.webp";
-import moves from "../data/moves.json";
 import { useCallback, useMemo } from "react";
-import { Move } from "../types/moves";
 import { Table } from "../components/molecules/Table";
+import { CellProps } from "react-table";
+import { SnorlaxMoves } from "@prisma/client";
+import Link from "next/link";
 
 const Home: NextPage = () => {
-  // TODO uncomment for trpc examples
-  // const hello = trpc.example.exampleOfPassingInput.useQuery({
-  //   text: "from Snorlax",
-  // });
-  // const examples = trpc.example.getAll.useQuery();
+  const { data: moves, isLoading } = trpc.snorlax.getAll.useQuery();
 
   const getCellProps = useCallback(() => {
-    return { className: "px-2 py-6 text-center" };
+    return { className: "px-2 py-2 text-left" };
   }, []);
 
   const getRowProps = useCallback(() => {
     return {
-      className: "border-b",
+      className: "border-b bg-transparent hover:bg-neutral-200",
     };
   }, []);
 
   const columns = useMemo(
     () => [
-      { Header: "Name", accessor: "name" },
+      {
+        Header: "Name",
+        accessor: "name",
+        Cell: ({ value, data, row }: CellProps<SnorlaxMoves>) => (
+          <Link href={`/moves/${data[row.index]?.identifier}`}>{value}</Link>
+        ),
+      },
       { Header: "Type", accessor: "type" },
       { Header: "Damage", accessor: "damage" },
       { Header: "pp", accessor: "pp" },
     ],
     []
   );
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -47,20 +54,18 @@ const Home: NextPage = () => {
           <Image
             src={snorlax}
             alt="Snorlax image"
-            height={513}
+            height={265}
             className="pr-12"
           />
+
           <Table
             columns={columns}
-            data={moves as Move[]}
+            data={moves || []}
             getCellProps={getCellProps}
             getRowProps={getRowProps}
           />
+          <div className="flex-column"></div>
         </div>
-        {/* TODO uncomment for trpc example */}
-        {/* <footer className="p-6 text-center">
-          {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
-        </footer> */}
       </main>
     </>
   );

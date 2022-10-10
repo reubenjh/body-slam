@@ -1,10 +1,10 @@
 // src/server/router/index.ts
 import { t } from "../trpc";
 
-import { exampleRouter } from "./example";
+import { snorlaxRouter } from "./snorlaxMoves";
 
 export const appRouter = t.router({
-  example: exampleRouter,
+  snorlax: snorlaxRouter,
 });
 
 // export type definition of API

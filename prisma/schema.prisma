@@ -10,6 +10,12 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Example {
-    id String @id @default(cuid())
+model SnorlaxMoves {
+    id              Int     @id @default(autoincrement())
+    identifier      String  @unique
+    type            String
+    name            String
+    damage          Int
+    pp              Int
+    imageSrc        String?
 }

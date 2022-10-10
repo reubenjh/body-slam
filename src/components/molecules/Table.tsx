@@ -24,7 +24,7 @@ export const Table = ({
     });
 
   return (
-    <table {...getTableProps()} className={`w-full border-l p-4 ${className}`}>
+    <table {...getTableProps()} className={`border ${className}`}>
       <thead>
         <tr>
           {flatHeaders
