@@ -54,7 +54,7 @@ const Home: NextPage = () => {
           <Image
             src={snorlax}
             alt="Snorlax image"
-            height={265}
+            height={512}
             className="pr-12"
           />
 
