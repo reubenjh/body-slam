@@ -12,12 +12,18 @@ You're welcome to change anything you want about the app, data structure, compon
 
 Plan to spend 1-2 hours on it. If you're not done in 2 hours, that's fine, just send us what you have. We're not looking for perfection, just a sense of how approach problems. There's no hidden tricks, tests or gotchas. If you have any questions, feel free to ask.
 
-- `npm i`
-- `npm run dev`
-
 -----
 
-## Todo
+## Setup
+
+- clone the repo
+- `npm i`
+- `npm run dev`
+- open `http://localhost:3000` in your browser
+- do the following tasks
+- push up into your own github repo and send us the link
+
+## Tasks
 
 We want to make some minor improvements:
 
