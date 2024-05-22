@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/future/image";
-// import { trpc } from "../utils/trpc";
 import snorlax from "public/snorlax.webp";
 import moves from "../data/moves.json";
 import { useCallback, useMemo } from "react";
@@ -9,12 +8,6 @@ import { Move } from "../types/moves";
 import { Table } from "../components/molecules/Table";
 
 const Home: NextPage = () => {
-  // TODO uncomment for trpc examples
-  // const hello = trpc.example.exampleOfPassingInput.useQuery({
-  //   text: "from Snorlax",
-  // });
-  // const examples = trpc.example.getAll.useQuery();
-
   const getCellProps = useCallback(() => {
     return { className: "px-2 py-6 text-center" };
   }, []);
@@ -57,10 +50,6 @@ const Home: NextPage = () => {
             getRowProps={getRowProps}
           />
         </div>
-        {/* TODO uncomment for trpc example */}
-        {/* <footer className="p-6 text-center">
-          {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
-        </footer> */}
       </main>
     </>
   );
